@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom" 
-import {Button} from "react-bootstrap"
 import {useContext} from "react"; 
 import AppContext from '../FormContext'; 
 
@@ -10,8 +9,9 @@ function Generate() {
     return (
       <>
         <div>
-          <Button><Link to="/coursework">Previous</Link> </Button>
-          <Button><Link to="/generate">Regenerate</Link> </Button>
+          <button><Link to="/interests">Edit Preferences</Link> </button>
+          <br/><br/>
+          <button><Link to="/generate">Regenerate</Link> </button>
         </div>
       </>
     )

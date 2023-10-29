@@ -5,15 +5,13 @@ import AppContext from '../FormContext';
 function Interests() {
   const { data, updateData } = useContext(AppContext);
   const [inputText, setInputText] = useState('');
-  const [displayText, setDisplayText] = useState('');
 
   const handleInputChange = (e) => {
     setInputText(e.target.value);
   };
 
   const handleButtonClick = () => {
-    setDisplayText(inputText);
-    updateData({interests: inputText})
+    updateData({...data, interests: inputText})
   };
 
   return (
@@ -25,6 +23,7 @@ function Interests() {
         value={inputText}
         onChange={handleInputChange}
       />
+      <br/>
       
       <br/> 
       <button onClick={handleButtonClick}><Link to="/availability">Next</Link></button>
